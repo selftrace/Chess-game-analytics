@@ -1,5 +1,4 @@
 # Chess Game Analytics
-from raw data to predicting wins
 
 So basically I took this massive Lichess dataset, stopped it from looking like a mess, engineered some actually useful features, threw a bunch of graphs at it, and then trained a model to guess who's gonna win.
 
