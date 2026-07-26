@@ -196,3 +196,4 @@ plt.xlabel('Number of games')
 plt.ylabel('Opening name')
 plt.gca().invert_yaxis()
 plt.show()
+
