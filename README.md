@@ -31,21 +31,21 @@ df[['base_time', 'increment']] = df['increment_code'].str.split('+', expand=True
 
 3. Expanded EDA (Visual chaos)
 Instead of just printing giant text tables nobody reads, plotted everything out to see what’s actually happening on the board:
-Opening win-rates: Plotted top openings vs. who actually wins (does White opening advantage even matter at normal ELOs?).
+Opening win-rates: Plotted top openings vs. who actually wins (does white opening advantage even matter at normal ELOs?).
 Rating distributions: Visualized ELO spread to see where most players cluster.
 Game lengths: Boxplots and histograms comparing game duration (turns and time) against victory_status (resign vs. mate vs. outoftime).
 
 4. Machine learning (Predicting the winner)
-Toss all the cleaned features into a baseline classification model to predict winner (White / Black / Draw).
+Toss all the cleaned features into a baseline classification model to predict winner (white / black / draw).
 Model: Random Forest Classifier / XGBoost baseline.
 Features used: rating_diff, white_rating, black_rating, base_time, turns, encoded opening features.
 Metrics: Accuracy score, confusion matrix, and feature importance to see what the model actually cares about (spoiler: rating gap carries hard).
 
-5. Key Insights & Takeaways
-Rating Gap is King: If the ELO difference is >150 points, opening choice barely saves you. The model relies heavily on rating_diff.
+5. Key insights
+Rating gap is king: If the ELO difference is >150 points, opening choice barely saves you. The model relies heavily on rating_diff.
 
-Time Scrambles: Short base_time games (1-3 min) end on outoftime way more often than resignations, while longer Rapid games almost always end in resignation or mate.
+Time scrambles: Short base_time games (1-3 min) end on outoftime way more often than resignations, while longer rapid games almost always end in resignation or mate.
 
-White Advantage is Real (Sort of): White maintains a subtle win-rate edge overall, but it’s much more noticeable in middle-to-high ELO brackets than lower ones.
+White advantage is real (Sort of): White maintains a subtle win-rate edge overall, but it’s much more noticeable in middle-to-high ELO brackets than lower ones.
 
-Opening Traps: Certain sharp openings yield insanely high win rates in lower ELOs simply because people don't know the refutations yet.
+Opening traps: Certain sharp openings yield insanely high win rates in lower ELOs simply because people don't know the refutations yet.
