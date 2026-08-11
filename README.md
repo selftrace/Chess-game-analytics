@@ -4,7 +4,7 @@ basically I took this massive Lichess dataset, stopped it from looking like a me
 
 Here’s the full breakdown:
 1. Data cleaning & storytelling (classic boring cleanup)
-First off, raw data is always a headache. Had to unzip everything, check the rows, look for missing values, and handle dupes so the stats wouldn't be totally fake.
+First off, raw data is always a headache. Had to unzip everything, check the rows, look for missing values and handle dupes so the stats wouldn't be totally fake.
 Unzipped and ingested the CSV straight into Pandas.
 Ran standard checks (info(), isnull(), duplicated()) so nothing weird breaks later.
 Did an IQR sweep to catch weird outlier games that make no sense.
