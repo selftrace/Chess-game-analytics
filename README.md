@@ -33,7 +33,7 @@ df[['base_time', 'increment']] = df['increment_code'].str.split('+', expand=True
 Instead of just printing giant text tables nobody reads, plotted everything out to see what’s actually happening on the board:
 Opening win-rates: plotted top openings vs. who actually wins (does white opening advantage even matter at normal ELOs?).
 Rating distributions: visualized ELO spread to see where most players cluster.
-Game lengths: Boxplots and histograms comparing game duration (turns and time) against victory_status (resign vs. mate vs. outoftime).
+Game lengths: boxplots and histograms comparing game duration (turns and time) against victory_status (resign vs. mate vs. outoftime).
 
 4. Machine learning (Predicting the winner)
 Toss all the cleaned features into a baseline classification model to predict winner (white / black / draw).
