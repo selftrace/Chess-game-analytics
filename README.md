@@ -32,7 +32,7 @@ df[['base_time', 'increment']] = df['increment_code'].str.split('+', expand=True
 3. Expanded EDA (Visual chaos)
 Instead of just printing giant text tables nobody reads, plotted everything out to see what’s actually happening on the board:
 Opening win-rates: plotted top openings vs. who actually wins (does white opening advantage even matter at normal ELOs?).
-Rating distributions: Visualized ELO spread to see where most players cluster.
+Rating distributions: visualized ELO spread to see where most players cluster.
 Game lengths: Boxplots and histograms comparing game duration (turns and time) against victory_status (resign vs. mate vs. outoftime).
 
 4. Machine learning (Predicting the winner)
