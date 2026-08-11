@@ -9,7 +9,7 @@ Unzipped and ingested the CSV straight into Pandas.
 Ran standard checks (info(), isnull(), duplicated()) so nothing weird breaks later.
 Did an IQR sweep to catch weird outlier games that make no sense.
 
-2. Feature engineering (Making the data actually useful, you know)
+2. Feature engineering (making the data actually useful)
 The default columns weren't cutting it, so I cooked up a few custom features to actually give the data some context:
 Timestamps to normal time: Converted created_at and last_move_at from epoch timestamps into actual datetime format. Now we can see when people are playing and how long games actually last in minutes.
 Splitting increment codes: Took things like "15+2" and split them into base_time (15) and increment (2). Now we can group games by Blitz, Rapid, Classical, etc.
