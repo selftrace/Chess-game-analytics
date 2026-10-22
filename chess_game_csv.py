@@ -189,11 +189,4 @@ for i, col in enumerate(categorical_cols_for_bar):
 plt.tight_layout()
 plt.show()
 
-plt.figure(figsize=(12, 7))
-df['opening_name'].value_counts().head(10).plot(kind='barh')
-plt.title('Top 10 most frequent opening names')
-plt.xlabel('Number of games')
-plt.ylabel('Opening name')
-plt.gca().invert_yaxis()
-plt.show()
 
